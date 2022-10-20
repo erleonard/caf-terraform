@@ -23,4 +23,8 @@ module "enterprise_scale" {
   root_name      = var.root_name
 
   deploy_core_landing_zones = true
+  deploy_management_resources = true
+  subscription_id_management = var.managementSubscriptionId
+  configure_management_resources = local.configure_management_resources
+
 }

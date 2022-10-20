@@ -37,3 +37,26 @@ variable "primary_location" {
   type = string
   default = "canadacentral"
 }
+
+
+variable "management_resources_location" {  
+  type    = string  
+  default = "westeurope"
+}
+
+variable "management_resources_tags" {  
+  type = map(string)  
+  default = {    
+  BelongsTo = "management"	  
+  }
+} 
+
+variable "log_retention_in_days" {
+  type    = number
+  default = 50
+}
+
+variable "security_alerts_email_address" {
+  type    = string
+  default = "pj@contoso.com" 
+}
